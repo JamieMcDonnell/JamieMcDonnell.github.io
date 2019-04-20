@@ -801,6 +801,12 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
+.pls{
+	padding-left: 10px;
+}
+.prs{
+	padding-right: 10px;
+}
 
 
 

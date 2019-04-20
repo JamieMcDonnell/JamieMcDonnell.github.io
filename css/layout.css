@@ -5,6 +5,14 @@
 *   03-18-2014
 =====================================================================
 
+// TODO LIST
+- Style each of the skill barswith a brignt colour that represents the product
+- Make the animation on each of them more intereating
+- Style the resume download button
+- Update the resume PDF
+- add code to handle submit of email form or comment it out for now
+- improve background images
+
    TOC:
    a. General Styles
    b. Header Styles
@@ -15,6 +23,8 @@
    g. Testimonials Section
    h. Contact Section
    i. Footer
+   j. Read more
+   k. Built With ReactJS
 
 ===================================================================== */
 
@@ -279,7 +289,7 @@ ul#nav li.current a { color: #F06000; }
 #resume .info {
    font: 16px/24px 'librebaskerville-italic', serif;
    color: #6E7881;
-   margin-bottom: 18px;
+   margin-bottom: 0px;
    margin-top: 9px;
 }
 #resume .info span {
@@ -345,6 +355,12 @@ ul#nav li.current a { color: #F06000; }
   	-moz-animation: illustrator 2s ease;
   	-webkit-animation: illustrator 2s ease;
 }
+.indesign {
+  	width: 55%;
+  	-moz-animation: indesign 2s ease;
+  	-webkit-animation: indesign 2s ease;
+}
+
 .wordpress {
   	width: 50%;
   	-moz-animation: wordpress 2s ease;
@@ -354,6 +370,11 @@ ul#nav li.current a { color: #F06000; }
   	width: 65%;
   	-moz-animation: squarespace 2s ease;
   	-webkit-animation: squarespace 2s ease;
+}
+.magento {
+  	width: 65%;
+  	-moz-animation: magento 2s ease;
+  	-webkit-animation: magento 2s ease;
 }
 .css {
   	width: 90%;
@@ -461,7 +482,7 @@ ul#nav li.current a { color: #F06000; }
 .skill{
 	border-radius: 4px;
 	padding: 3px 6px;
-	background-color: #B1B1B1;
+	background-color: #E3C8F0;
 	color: #fff;
 	margin-right: 4px;
 }
@@ -846,7 +867,6 @@ call-to-action .button {
    background: #191919;
    padding-top: 96px;
    padding-bottom: 102px;
-   color: #636363;
 }
 #contact .section-head { margin-bottom: 42px; }
 
@@ -1059,3 +1079,75 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 #go-top a:hover { background-color: #0F9095; }
 
+
+/* ------------------------------------------------------------------ */
+/* j. Read more
+/* ------------------------------------------------------------------ */
+
+input[type="checkbox"].read-more-state {
+  display: none;
+}
+.read-more-wrap {
+	margin-bottom: 0px !important;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  pointer-events: none;
+  font-size: 0;
+  margin: 0;
+  transition: .25s ease;
+  font: 15px/24px 'opensans-regular', sans-serif;
+  display: block;
+  clear: both;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+	pointer-events: auto;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
+
+/* ------------------------------------------------------------------ */
+/* k. Built With ReactJS
+/* ------------------------------------------------------------------ */
+
+#builtWithReactJs{
+	position: fixed;
+	right: 0;
+	top: 50px;
+	z-index: 2;
+	width: 50px;
+	padding: 4px;
+	background-color: rgba(0,0,0, .5);
+	border-radius: 4px;
+}
+
+#builtWithReactJs small{
+	color: #00cff4;
+	line-height: .4;
+}
+#builtWithReactJs img{
+	vertical-align: middle;
+}
