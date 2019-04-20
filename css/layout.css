@@ -22,7 +22,17 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+body { 
+	background: #0f0f0f; 
+}
+
+.columns{
+	text-align: left;
+}
+
+footer .columns, #testimonials .columns{
+	text-align: center;
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -340,6 +350,11 @@ ul#nav li.current a { color: #F06000; }
   	-moz-animation: wordpress 2s ease;
   	-webkit-animation: wordpress 2s ease;
 }
+.squarespace {
+  	width: 65%;
+  	-moz-animation: squarespace 2s ease;
+  	-webkit-animation: squarespace 2s ease;
+}
 .css {
   	width: 90%;
   	-moz-animation: css 2s ease;
@@ -355,6 +370,16 @@ ul#nav li.current a { color: #F06000; }
   	-moz-animation: jquery 2s ease;
   	-webkit-animation: jquery 2s ease;
 }
+.reactjs {
+  	width: 60%;
+  	-moz-animation: reactjs 2s ease;
+  	-webkit-animation: reactjs 2s ease;
+}
+.d3js {
+  	width: 55%;
+  	-moz-animation: d3js 2s ease;
+  	-webkit-animation: d3js 2s ease;
+}
 
 @-moz-keyframes photoshop {
   0%   { width: 0px;  }
@@ -368,6 +393,10 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
+@-moz-keyframes squarespace {
+  0%   { width: 0px;  }
+  100% { width: 65%;  }
+}
 @-moz-keyframes css {
   0%   { width: 0px;  }
   100% { width: 90%;  }
@@ -379,6 +408,14 @@ ul#nav li.current a { color: #F06000; }
 @-moz-keyframes jquery {
   0%   { width: 0px;  }
   100% { width: 50%;  }
+}
+@-moz-keyframes reactjs {
+  0%   { width: 0px;  }
+  100% { width: 65%;  }
+}
+@-moz-keyframes d3js {
+  0%   { width: 0px;  }
+  100% { width: 55%;  }
 }
 
 @-webkit-keyframes photoshop {
@@ -393,6 +430,10 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
+@-webkit-keyframes squarespace {
+  0%   { width: 0px;  }
+  100% { width: 65%;  }
+}
 @-webkit-keyframes css {
   0%   { width: 0px;  }
   100% { width: 90%;  }
@@ -405,11 +446,25 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
+@-webkit-keyframes reactjs {
+  0%   { width: 0px;  }
+  100% { width: 65%;  }
+}
+@-webkit-keyframes d3js {
+  0%   { width: 0px;  }
+  100% { width: 55%;  }
+}
 
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
 /* ------------------------------------------------------------------ */
-
+.skill{
+	border-radius: 4px;
+	padding: 3px 6px;
+	background-color: #B1B1B1;
+	color: #fff;
+	margin-right: 4px;
+}
 #portfolio {
    background: #ebeeee;
    padding-top: 90px;
