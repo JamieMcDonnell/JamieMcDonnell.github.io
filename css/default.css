@@ -725,7 +725,7 @@ properly.
 	   margin: 0 auto;
       padding: 0;
 	}
-   .column, .columns {
+   .column, .columns:not(.hide) {
 	   width: auto !important;
 	   float: none;
 	   margin-left: 0;

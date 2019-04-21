@@ -202,7 +202,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #F06000; }
+ul#nav li.current a { color: #00cff4; }
 
 
 /* ------------------------------------------------------------------ */
@@ -360,10 +360,12 @@ ul#nav li.current a { color: #F06000; }
 	background-color: #E3C8F0;
 	color: #fff;
 	margin: 0 4px 4px 0;
-	cursor: pointer;
 	position: relative;
-	width: 160px;
 	display: inline-block;
+}
+#portfolio .skillToggles .skill{
+	width: 160px;
+	cursor: pointer;
 }
 .skill .bar-expand{
 	opacity: 0;
@@ -691,6 +693,13 @@ call-to-action .button {
    font-size: 24px;
    line-height: 48px;
    color: #fff
+}
+#testimonials blockquote .rating {
+	margin: 10px 0;
+}
+
+#testimonials blockquote .rating .ratingStar{
+	font-size: 1.5em;
 }
 #testimonials blockquote cite {
    display: block;
@@ -1071,6 +1080,34 @@ input[type="checkbox"].read-more-state {
 	padding: 4px;
 	background-color: rgba(0,0,0, .5);
 	border-radius: 4px;
+	-webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+}
+#builtWithReactJs p{
+	margin: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+	display: block;
+	text-align: center;
+}
+#builtWithReactJs:hover, #builtWithReactJs:focus{
+	background-color: rgba(0,0,0, .9);
+	width: 250px;
+}
+#builtWithReactJs:hover p, #builtWithReactJs:focus p{
+	width: auto;
+	height: auto;
+	opacity: 1;
+}
+#builtWithReactJs:hover small:first-of-type, #builtWithReactJs:focus small:first-of-type{
+	margin-right: 10px;
+}
+#builtWithReactJs:hover small:last-of-type, #builtWithReactJs:focus small:last-of-type{
+	margin-left: 10px;
 }
 
 #builtWithReactJs small{
@@ -1079,4 +1116,5 @@ input[type="checkbox"].read-more-state {
 }
 #builtWithReactJs img{
 	vertical-align: middle;
+	width: 42px;
 }
