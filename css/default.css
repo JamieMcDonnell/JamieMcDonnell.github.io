@@ -801,6 +801,9 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
+.block{
+	display: block !important;
+}
 .pls{
 	padding-left: 10px;
 }
