@@ -14,25 +14,6 @@
 	   $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
 	 }, 100);
 
-
-/*----------------------------------------------------*/
-/* Smooth Scrolling
------------------------------------------------------- */
-
-   $('.smoothscroll').on('click',function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash,
-	    $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 800, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
-
-
 /*----------------------------------------------------*/
 /* Highlight the current section in the navigation bar
 ------------------------------------------------------*/
@@ -51,8 +32,6 @@
 
 			var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
 		  
-		  console.log(active_section.prop("id"));
-		  
 		  if(active_section.prop("id") !== "contact"){
 			  $(".notification.in").removeClass("in");
 		  }
@@ -64,8 +43,6 @@
 		offset: '35%'
 
 	});
-
-
 /*----------------------------------------------------*/
 /*	Make sure that #header-background-image height is
 /* equal to the browser height.
