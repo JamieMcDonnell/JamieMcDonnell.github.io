@@ -50,6 +50,12 @@
 			if (direction === "up") active_section = active_section.prev();
 
 			var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
+		  
+		  console.log(active_section.prop("id"));
+		  
+		  if(active_section.prop("id") !== "contact"){
+			  $(".notification.in").removeClass("in");
+		  }
 
          navigation_links.parent().removeClass("current");
 			active_link.parent().addClass("current");
@@ -136,44 +142,4 @@
 /*----------------------------------------------------*/
 /*	contact form
 ------------------------------------------------------*/
-
-   $('form#contactForm button.submit').click(function() {
-
-      $('#image-loader').fadeIn();
-
-      var contactName = $('#contactForm #contactName').val();
-      var contactEmail = $('#contactForm #contactEmail').val();
-      var contactSubject = $('#contactForm #contactSubject').val();
-      var contactMessage = $('#contactForm #contactMessage').val();
-
-      var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
-	   var template_params = {
-			   "reply_to": contactEmail,
-			   "from_name": contactName,
-			   "to_name": "From Website",
-		   		"subject": contactSubject,
-			   "message_html": contactMessage
-			}
-
-			var service_id = "default_service";
-			var template_id = "template_j4HMh8wI";
-			var user_id = "";
-			emailjs.send(service_id, template_id, template_params)
-	   		.then(function(){ 
-			   $('#image-loader').fadeOut();
-			   $("#message-success").fadeIn();
-				setTimeout(function(){
-					$("#message-success").fadeOut();
-				}, 5000);
-			  $('#contactForm').find("input, textarea").val("");
-			 }, function(err) {
-			   $('#image-loader').fadeOut();
-			   $("#message-warning").fadeIn();
-				setTimeout(function(){
-					$("#message-warning").fadeOut();
-				}, 5000);
-			});
-      return false;
-   });
 });

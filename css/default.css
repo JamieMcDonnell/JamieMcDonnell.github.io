@@ -19,6 +19,7 @@ d. Grid
 e. Others
    1. Clearing
    2. Misc
+   3. notification
 
 =====================================================================  */
 
@@ -809,6 +810,42 @@ properly.
 }
 .prs{
 	padding-right: 10px;
+}
+
+.notification{
+	position: fixed;
+	display: block;
+	height: 70px;
+	top: -100px;
+    left: 25%;
+	width: 50%;
+	padding: 20px;
+	margin: 0 auto;
+	background-color: #B1B1B1;
+	color: #fff;
+	border-radius: 4px;
+	opacity: 0;
+	z-index: 2;
+	pointer-events: none;
+	-webkit-transition: all 1s ease-in-out;
+   -moz-transition: all 1s ease-in-out;
+   -o-transition: all 1s ease-in-out;
+   transition: all 1s ease-in-out;
+}
+
+.notification.in{
+	opacity: 1;
+	top: 100px;
+}
+
+.info{
+	background-color:#2EBBDC !important;
+}
+.success{
+	background-color:#3EC33C !important;
+}
+.danger{
+	background-color: #EC4E51 !important;
 }
 
 

@@ -378,7 +378,7 @@ ul#nav li.current a { color: #00cff4; }
 	transition: all 0.3s ease-in-out;
 }
 .skill.on{
-	background-color: #000;
+	background-color: #a76cc4;
 	color: #fff;
 }
 #portfolio {
@@ -806,6 +806,7 @@ call-to-action .button {
    padding-top: 96px;
    padding-bottom: 102px;
 }
+
 #contact .section-head { margin-bottom: 42px; }
 
 #contact a, #contact a:visited  { color: #11ABB0; }
@@ -1050,10 +1051,12 @@ input[type="checkbox"].read-more-state {
 
 .read-more-state ~ .read-more-trigger:before {
   content: 'Show more';
+  display: block;
 }
 
 .read-more-state:checked ~ .read-more-trigger:before {
   content: 'Show less';
+  display: block;
 }
 
 .read-more-trigger {
